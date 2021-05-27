@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		3FD2A47B2658085300A93E3B /* SwiftIOAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2A47A2658085300A93E3B /* SwiftIOAppTests.swift */; };
 		3FD2A4862658085300A93E3B /* SwiftIOAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2A4852658085300A93E3B /* SwiftIOAppUITests.swift */; };
 		3FD2A49426580CC900A93E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2A49326580CC900A93E3B /* ViewController.swift */; };
+		3FE8D9D426601CCB003D83E5 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE8D9D126601CB8003D83E5 /* ORSSerial.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +32,44 @@
 			remoteGlobalIDString = 3FD2A4642658085200A93E3B;
 			remoteInfo = SwiftIOApp;
 		};
+		3FE8D9CC26601CB8003D83E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE8D9C926601CB8003D83E5 /* ORSSerialPort.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCA89111A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		3FE8D9D026601CB8003D83E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE8D9C926601CB8003D83E5 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		3FE8D9D226601CB8003D83E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE8D9C926601CB8003D83E5 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F085D9A266000BF00C93FA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3F085DA426600B0600C93FA5 /* SwiftIOApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftIOApp.entitlements; sourceTree = "<group>"; };
 		3FD2A4652658085200A93E3B /* SwiftIOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD2A4682658085200A93E3B /* SwiftIOAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIOAppApp.swift; sourceTree = "<group>"; };
 		3FD2A46A2658085200A93E3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +83,7 @@
 		3FD2A4852658085300A93E3B /* SwiftIOAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIOAppUITests.swift; sourceTree = "<group>"; };
 		3FD2A4872658085300A93E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD2A49326580CC900A93E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FE8D9C926601CB8003D83E5 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "/Users/student/Desktop/SwiftIO-VISA-Driver/SwiftIOApp/Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE8D9D426601CCB003D83E5 /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +112,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F085D96265FFD6E00C93FA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FD2A45C2658085200A93E3B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +126,8 @@
 				3FD2A4792658085300A93E3B /* SwiftIOAppTests */,
 				3FD2A4842658085300A93E3B /* SwiftIOAppUITests */,
 				3FD2A4662658085200A93E3B /* Products */,
+				3F085D96265FFD6E00C93FA5 /* Frameworks */,
+				3FE8D9C926601CB8003D83E5 /* ORSSerialPort.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +144,7 @@
 		3FD2A4672658085200A93E3B /* SwiftIOApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F085DA426600B0600C93FA5 /* SwiftIOApp.entitlements */,
 				3FD2A4682658085200A93E3B /* SwiftIOAppApp.swift */,
 				3FD2A46A2658085200A93E3B /* ContentView.swift */,
 				3FD2A46C2658085300A93E3B /* Assets.xcassets */,
@@ -133,6 +181,15 @@
 			path = SwiftIOAppUITests;
 			sourceTree = "<group>";
 		};
+		3FE8D9CA26601CB8003D83E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FE8D9D126601CB8003D83E5 /* ORSSerial.framework */,
+				3FE8D9D326601CB8003D83E5 /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,10 +200,12 @@
 				3FD2A4612658085200A93E3B /* Sources */,
 				3FD2A4622658085200A93E3B /* Frameworks */,
 				3FD2A4632658085200A93E3B /* Resources */,
+				3F085D9A266000BF00C93FA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3FE8D9CD26601CB8003D83E5 /* PBXTargetDependency */,
 			);
 			name = SwiftIOApp;
 			productName = SwiftIOApp;
@@ -222,6 +281,12 @@
 			mainGroup = 3FD2A45C2658085200A93E3B;
 			productRefGroup = 3FD2A4662658085200A93E3B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3FE8D9CA26601CB8003D83E5 /* Products */;
+					ProjectRef = 3FE8D9C926601CB8003D83E5 /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3FD2A4642658085200A93E3B /* SwiftIOApp */,
@@ -230,6 +295,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3FE8D9D126601CB8003D83E5 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 3FE8D9D026601CB8003D83E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE8D9D326601CB8003D83E5 /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 3FE8D9D226601CB8003D83E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3FD2A4632658085200A93E3B /* Resources */ = {
@@ -297,6 +379,12 @@
 			target = 3FD2A4642658085200A93E3B /* SwiftIOApp */;
 			targetProxy = 3FD2A4822658085300A93E3B /* PBXContainerItemProxy */;
 		};
+		3FE8D9CD26601CB8003D83E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerial;
+			platformFilter = ios;
+			targetProxy = 3FE8D9CC26601CB8003D83E5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -355,7 +443,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -409,7 +497,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -421,8 +509,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftIOApp/SwiftIOApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftIOApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R6BTB7M82;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftIOApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -432,6 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MERGIO.SwiftIOApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,8 +534,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftIOApp/SwiftIOApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftIOApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R6BTB7M82;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftIOApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -453,6 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MERGIO.SwiftIOApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

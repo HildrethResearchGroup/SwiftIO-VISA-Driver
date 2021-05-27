@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ORSSerial
 
 struct ContentView: View {
     
