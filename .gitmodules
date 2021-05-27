@@ -1,0 +1,3 @@
+[submodule "SwiftIOApp/Frameworks/ORSSerialPort"]
+	path = SwiftIOApp/Frameworks/ORSSerialPort
+	url = https://github.com/armadsen/ORSSerialPort.git
