@@ -17,14 +17,6 @@ struct ContentView: View {
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text("Testing Text").font(.title)
-            Text("Below the text").font(.title2)
-            HStack {
-                Text("Test hstack").font(.subheadline)
-                Text("We out here").font(.subheadline)
-            }
-        }.padding()
-        VStack(alignment: .leading) {
             Text("Enter pin number and voltage.")
                 .font(.title)
             TextField("Pin number", text: $pinNum) {
