@@ -1,3 +1,9 @@
 [submodule "SwiftIOApp/Frameworks/ORSSerialPort"]
 	path = SwiftIOApp/Frameworks/ORSSerialPort
 	url = https://github.com/armadsen/ORSSerialPort.git
+[submodule "SwiftIOApp/Frameworks/Frameworks/ORSSerialPort"]
+	path = SwiftIOApp/Frameworks/Frameworks/ORSSerialPort
+	url = https://github.com/armadsen/ORSSerialPort.git
+[submodule "Sources/SwiftIO-VISA-Driver/ThirdParty/ORSSerialPort"]
+	path = Sources/SwiftIO-VISA-Driver/ThirdParty/ORSSerialPort
+	url = https://github.com/armadsen/ORSSerialPort.git

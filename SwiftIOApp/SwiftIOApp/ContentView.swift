@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ORSSerial
 
 struct ContentView: View {
     
@@ -33,7 +34,7 @@ struct ContentView: View {
             }
             Button(action: {
                 
-                // This is where the serial is called.
+                connectSendData(path: "/dev/cu.RNBT-EE43-RNI-SPP")
                 
                 print(pinNum + " " + voltage);
             }, label: {
@@ -74,6 +75,15 @@ struct ContentView: View {
     func command(pinNum: Int, voltage: Float) {
         // insert command to send voltage to pin
     }
+    
+    func connectSendData(path: String) {
+        let port = ORSSerialPort(path: path)
+        port?.baudRate = 115200
+        let dataToSend = "H".data(using: .utf8)!
+        port?.send(dataToSend)
+        port?.close()
+    }
+    
     
 }
 
