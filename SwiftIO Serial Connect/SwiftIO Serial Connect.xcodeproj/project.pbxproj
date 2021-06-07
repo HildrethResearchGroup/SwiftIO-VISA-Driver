@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FC6DDF5266E8DDB0029E589 /* SwiftIO_Serial_ConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6DDF4266E8DDB0029E589 /* SwiftIO_Serial_ConnectApp.swift */; };
+		3FC6DDF7266E8DDB0029E589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6DDF6266E8DDB0029E589 /* ContentView.swift */; };
+		3FC6DDF9266E8DDC0029E589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6DDF8266E8DDC0029E589 /* Assets.xcassets */; };
+		3FC6DDFC266E8DDC0029E589 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6DDFB266E8DDC0029E589 /* Preview Assets.xcassets */; };
+		3FC6DE08266E8DDD0029E589 /* SwiftIO_Serial_ConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6DE07266E8DDD0029E589 /* SwiftIO_Serial_ConnectTests.swift */; };
+		3FC6DE13266E8DDD0029E589 /* SwiftIO_Serial_ConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6DE12266E8DDD0029E589 /* SwiftIO_Serial_ConnectUITests.swift */; };
+		3FC6DE22266E8F4F0029E589 /* Frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6DE21266E8F4F0029E589 /* Frameworks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FC6DE04266E8DDD0029E589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC6DDE9266E8DDB0029E589 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC6DDF0266E8DDB0029E589;
+			remoteInfo = "SwiftIO Serial Connect";
+		};
+		3FC6DE0F266E8DDD0029E589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC6DDE9266E8DDB0029E589 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC6DDF0266E8DDB0029E589;
+			remoteInfo = "SwiftIO Serial Connect";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FC6DDF1266E8DDB0029E589 /* SwiftIO Serial Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftIO Serial Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC6DDF4266E8DDB0029E589 /* SwiftIO_Serial_ConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIO_Serial_ConnectApp.swift; sourceTree = "<group>"; };
+		3FC6DDF6266E8DDB0029E589 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FC6DDF8266E8DDC0029E589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FC6DDFB266E8DDC0029E589 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FC6DDFD266E8DDC0029E589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC6DDFE266E8DDC0029E589 /* SwiftIO_Serial_Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftIO_Serial_Connect.entitlements; sourceTree = "<group>"; };
+		3FC6DE03266E8DDD0029E589 /* SwiftIO Serial ConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftIO Serial ConnectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC6DE07266E8DDD0029E589 /* SwiftIO_Serial_ConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIO_Serial_ConnectTests.swift; sourceTree = "<group>"; };
+		3FC6DE09266E8DDD0029E589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC6DE0E266E8DDD0029E589 /* SwiftIO Serial ConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftIO Serial ConnectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC6DE12266E8DDD0029E589 /* SwiftIO_Serial_ConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIO_Serial_ConnectUITests.swift; sourceTree = "<group>"; };
+		3FC6DE14266E8DDD0029E589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC6DE21266E8F4F0029E589 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC6DDEE266E8DDB0029E589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC6DE00266E8DDD0029E589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC6DE0B266E8DDD0029E589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FC6DDE8266E8DDB0029E589 = {
+			isa = PBXGroup;
+			children = (
+				3FC6DE21266E8F4F0029E589 /* Frameworks */,
+				3FC6DDF3266E8DDB0029E589 /* SwiftIO Serial Connect */,
+				3FC6DE06266E8DDD0029E589 /* SwiftIO Serial ConnectTests */,
+				3FC6DE11266E8DDD0029E589 /* SwiftIO Serial ConnectUITests */,
+				3FC6DDF2266E8DDB0029E589 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC6DDF2266E8DDB0029E589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6DDF1266E8DDB0029E589 /* SwiftIO Serial Connect.app */,
+				3FC6DE03266E8DDD0029E589 /* SwiftIO Serial ConnectTests.xctest */,
+				3FC6DE0E266E8DDD0029E589 /* SwiftIO Serial ConnectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FC6DDF3266E8DDB0029E589 /* SwiftIO Serial Connect */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6DDF4266E8DDB0029E589 /* SwiftIO_Serial_ConnectApp.swift */,
+				3FC6DDF6266E8DDB0029E589 /* ContentView.swift */,
+				3FC6DDF8266E8DDC0029E589 /* Assets.xcassets */,
+				3FC6DDFD266E8DDC0029E589 /* Info.plist */,
+				3FC6DDFE266E8DDC0029E589 /* SwiftIO_Serial_Connect.entitlements */,
+				3FC6DDFA266E8DDC0029E589 /* Preview Content */,
+			);
+			path = "SwiftIO Serial Connect";
+			sourceTree = "<group>";
+		};
+		3FC6DDFA266E8DDC0029E589 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6DDFB266E8DDC0029E589 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FC6DE06266E8DDD0029E589 /* SwiftIO Serial ConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6DE07266E8DDD0029E589 /* SwiftIO_Serial_ConnectTests.swift */,
+				3FC6DE09266E8DDD0029E589 /* Info.plist */,
+			);
+			path = "SwiftIO Serial ConnectTests";
+			sourceTree = "<group>";
+		};
+		3FC6DE11266E8DDD0029E589 /* SwiftIO Serial ConnectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6DE12266E8DDD0029E589 /* SwiftIO_Serial_ConnectUITests.swift */,
+				3FC6DE14266E8DDD0029E589 /* Info.plist */,
+			);
+			path = "SwiftIO Serial ConnectUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FC6DDF0266E8DDB0029E589 /* SwiftIO Serial Connect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC6DE17266E8DDD0029E589 /* Build configuration list for PBXNativeTarget "SwiftIO Serial Connect" */;
+			buildPhases = (
+				3FC6DDED266E8DDB0029E589 /* Sources */,
+				3FC6DDEE266E8DDB0029E589 /* Frameworks */,
+				3FC6DDEF266E8DDB0029E589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftIO Serial Connect";
+			productName = "SwiftIO Serial Connect";
+			productReference = 3FC6DDF1266E8DDB0029E589 /* SwiftIO Serial Connect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FC6DE02266E8DDD0029E589 /* SwiftIO Serial ConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC6DE1A266E8DDD0029E589 /* Build configuration list for PBXNativeTarget "SwiftIO Serial ConnectTests" */;
+			buildPhases = (
+				3FC6DDFF266E8DDD0029E589 /* Sources */,
+				3FC6DE00266E8DDD0029E589 /* Frameworks */,
+				3FC6DE01266E8DDD0029E589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC6DE05266E8DDD0029E589 /* PBXTargetDependency */,
+			);
+			name = "SwiftIO Serial ConnectTests";
+			productName = "SwiftIO Serial ConnectTests";
+			productReference = 3FC6DE03266E8DDD0029E589 /* SwiftIO Serial ConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FC6DE0D266E8DDD0029E589 /* SwiftIO Serial ConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC6DE1D266E8DDD0029E589 /* Build configuration list for PBXNativeTarget "SwiftIO Serial ConnectUITests" */;
+			buildPhases = (
+				3FC6DE0A266E8DDD0029E589 /* Sources */,
+				3FC6DE0B266E8DDD0029E589 /* Frameworks */,
+				3FC6DE0C266E8DDD0029E589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC6DE10266E8DDD0029E589 /* PBXTargetDependency */,
+			);
+			name = "SwiftIO Serial ConnectUITests";
+			productName = "SwiftIO Serial ConnectUITests";
+			productReference = 3FC6DE0E266E8DDD0029E589 /* SwiftIO Serial ConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FC6DDE9266E8DDB0029E589 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3FC6DDF0266E8DDB0029E589 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					3FC6DE02266E8DDD0029E589 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 3FC6DDF0266E8DDB0029E589;
+					};
+					3FC6DE0D266E8DDD0029E589 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 3FC6DDF0266E8DDB0029E589;
+					};
+				};
+			};
+			buildConfigurationList = 3FC6DDEC266E8DDB0029E589 /* Build configuration list for PBXProject "SwiftIO Serial Connect" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FC6DDE8266E8DDB0029E589;
+			productRefGroup = 3FC6DDF2266E8DDB0029E589 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FC6DDF0266E8DDB0029E589 /* SwiftIO Serial Connect */,
+				3FC6DE02266E8DDD0029E589 /* SwiftIO Serial ConnectTests */,
+				3FC6DE0D266E8DDD0029E589 /* SwiftIO Serial ConnectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC6DDEF266E8DDB0029E589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC6DE22266E8F4F0029E589 /* Frameworks in Resources */,
+				3FC6DDFC266E8DDC0029E589 /* Preview Assets.xcassets in Resources */,
+				3FC6DDF9266E8DDC0029E589 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC6DE01266E8DDD0029E589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC6DE0C266E8DDD0029E589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FC6DDED266E8DDB0029E589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC6DDF7266E8DDB0029E589 /* ContentView.swift in Sources */,
+				3FC6DDF5266E8DDB0029E589 /* SwiftIO_Serial_ConnectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC6DDFF266E8DDD0029E589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC6DE08266E8DDD0029E589 /* SwiftIO_Serial_ConnectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC6DE0A266E8DDD0029E589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC6DE13266E8DDD0029E589 /* SwiftIO_Serial_ConnectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FC6DE05266E8DDD0029E589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC6DDF0266E8DDB0029E589 /* SwiftIO Serial Connect */;
+			targetProxy = 3FC6DE04266E8DDD0029E589 /* PBXContainerItemProxy */;
+		};
+		3FC6DE10266E8DDD0029E589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC6DDF0266E8DDB0029E589 /* SwiftIO Serial Connect */;
+			targetProxy = 3FC6DE0F266E8DDD0029E589 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3FC6DE15266E8DDD0029E589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FC6DE16266E8DDD0029E589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3FC6DE18266E8DDD0029E589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftIO Serial Connect/SwiftIO_Serial_Connect.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftIO Serial Connect/Preview Content\"";
+				DEVELOPMENT_TEAM = 6U85TAK375;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftIO Serial Connect/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MERGIO.SwiftIO-Serial-Connect";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3FC6DE19266E8DDD0029E589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftIO Serial Connect/SwiftIO_Serial_Connect.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftIO Serial Connect/Preview Content\"";
+				DEVELOPMENT_TEAM = 6U85TAK375;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftIO Serial Connect/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MERGIO.SwiftIO-Serial-Connect";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3FC6DE1B266E8DDD0029E589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6U85TAK375;
+				INFOPLIST_FILE = "SwiftIO Serial ConnectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MERGIO.SwiftIO-Serial-ConnectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftIO Serial Connect.app/Contents/MacOS/SwiftIO Serial Connect";
+			};
+			name = Debug;
+		};
+		3FC6DE1C266E8DDD0029E589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6U85TAK375;
+				INFOPLIST_FILE = "SwiftIO Serial ConnectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MERGIO.SwiftIO-Serial-ConnectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftIO Serial Connect.app/Contents/MacOS/SwiftIO Serial Connect";
+			};
+			name = Release;
+		};
+		3FC6DE1E266E8DDD0029E589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6U85TAK375;
+				INFOPLIST_FILE = "SwiftIO Serial ConnectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MERGIO.SwiftIO-Serial-ConnectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "SwiftIO Serial Connect";
+			};
+			name = Debug;
+		};
+		3FC6DE1F266E8DDD0029E589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6U85TAK375;
+				INFOPLIST_FILE = "SwiftIO Serial ConnectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MERGIO.SwiftIO-Serial-ConnectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "SwiftIO Serial Connect";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC6DDEC266E8DDB0029E589 /* Build configuration list for PBXProject "SwiftIO Serial Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC6DE15266E8DDD0029E589 /* Debug */,
+				3FC6DE16266E8DDD0029E589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC6DE17266E8DDD0029E589 /* Build configuration list for PBXNativeTarget "SwiftIO Serial Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC6DE18266E8DDD0029E589 /* Debug */,
+				3FC6DE19266E8DDD0029E589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC6DE1A266E8DDD0029E589 /* Build configuration list for PBXNativeTarget "SwiftIO Serial ConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC6DE1B266E8DDD0029E589 /* Debug */,
+				3FC6DE1C266E8DDD0029E589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC6DE1D266E8DDD0029E589 /* Build configuration list for PBXNativeTarget "SwiftIO Serial ConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC6DE1E266E8DDD0029E589 /* Debug */,
+				3FC6DE1F266E8DDD0029E589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FC6DDE9266E8DDB0029E589 /* Project object */;
+}

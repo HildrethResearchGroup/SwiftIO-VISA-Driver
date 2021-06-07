@@ -513,7 +513,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftIOApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7R6BTB7M82;
+				DEVELOPMENT_TEAM = 6U85TAK375;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftIOApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -538,7 +538,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftIOApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7R6BTB7M82;
+				DEVELOPMENT_TEAM = 6U85TAK375;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftIOApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
