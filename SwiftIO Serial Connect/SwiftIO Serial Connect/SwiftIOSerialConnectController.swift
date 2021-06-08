@@ -63,10 +63,31 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     
     
     
-    func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
-        
+    
+    // Serial Port Delegate functions for gaining recieved data
+    func serialPortWasOpened(_ serialPort: ORSSerialPort) {
+        self.openCloseButton.title = "Close"
     }
     
+    func serialPortWasClosed(_ serialPort: ORSSerialPort) {
+        self.openCloseButton.title = "Open"
+    }
+    
+    func serialPort(_ serialPort: ORSSerialPort, didReceive data: Data) {
+        if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+            self.dataReceivedTextView.textStorage?.mutableString.append(string as String)
+            self.dataReceivedTextView.needsDisplay = true
+        }
+    }
+    
+    func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
+        self.serialPort = nil
+        self.openCloseButton.title = "Open"
+    }
+    
+    func serialPort(_ serialPort: ORSSerialPort, didEncounterError error: Error) {
+        print("SerialPort \(serialPort) encountered an error: \(error)")
+    }
     
     
 }
