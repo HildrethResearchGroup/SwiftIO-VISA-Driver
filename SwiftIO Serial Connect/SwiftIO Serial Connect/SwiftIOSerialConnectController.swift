@@ -24,6 +24,8 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
         }
     }
     
+    let sendLength = 5
+    
     
     // Outlets:
     @IBOutlet weak var sendButton: NSButton!
@@ -38,6 +40,14 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     @IBAction func sendButtonAction(_ sender: Any) {
         // Extract string out of text field and turn in utf8 encoding
         let string = self.sendTextField.stringValue
+        
+        // Check if the string is of correct character length
+        if string.count != sendLength {
+            self.dataReceivedTextView.textStorage?.mutableString.append("Error: sending data of length: \(string.count), Expected: \(sendLength)")
+            self.dataReceivedTextView.needsDisplay = true
+            return
+        }
+        
         let data = string.data(using: String.Encoding.utf8)
         
         // Send data over serial port
