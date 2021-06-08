@@ -32,9 +32,22 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     @IBOutlet weak var sendTextField: NSTextField!
     @IBOutlet weak var openCloseButton: NSButton!
     @IBOutlet var dataReceivedTextView: NSTextView!
-    
-    
+    @IBOutlet weak var colorWell: NSColorWell!
+    @IBOutlet weak var helpTextField: NSTextField!
+    @IBOutlet weak var helpButton: NSButton!
     // Actions:
+    
+    
+    @IBAction func helpButtonAction(_ sender: Any) {
+        if helpButton.state == NSControl.StateValue.on {
+            helpTextField.stringValue = "SwiftIO BaudRate: 115200"
+        }
+        else {
+            helpTextField.stringValue = ""
+        }
+        
+        
+    }
     
     // Function called when "Send" button is pressed
     @IBAction func sendButtonAction(_ sender: Any) {
@@ -59,8 +72,11 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
         if let port = self.serialPort {
             if (port.isOpen) {
                 port.close()
+                
+                
             } else {
                 port.open()
+                
                 self.dataReceivedTextView.textStorage?.mutableString.setString("");
             }
         }
@@ -76,10 +92,12 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     
     // Serial Port Delegate functions for gaining recieved data
     func serialPortWasOpened(_ serialPort: ORSSerialPort) {
+        colorWell.color = NSColor(red: 0.0, green: 99.0, blue: 0.0, alpha: 1.0)
         self.openCloseButton.title = "Close"
     }
     
     func serialPortWasClosed(_ serialPort: ORSSerialPort) {
+        colorWell.color = NSColor(red: 99.0, green: 0.0, blue: 0.0, alpha: 1.0)
         self.openCloseButton.title = "Open"
     }
     
