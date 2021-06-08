@@ -24,7 +24,7 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
         }
     }
     
-    let sendLength = 5
+    let maxSendLength = 64
     
     
     // Outlets:
@@ -55,16 +55,35 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
         let string = self.sendTextField.stringValue
         
         // Check if the string is of correct character length
-        if string.count != sendLength {
-            self.dataReceivedTextView.textStorage?.mutableString.append("Error: sending data of length: \(string.count), Expected: \(sendLength)")
+        if string.count > maxSendLength {
+            self.dataReceivedTextView.textStorage?.mutableString.append("\n Error: send data length too long, Expected: 64 or less characters")
             self.dataReceivedTextView.needsDisplay = true
             return
         }
         
-        let data = string.data(using: String.Encoding.utf8)
+        
+        let paddedString = prepareData(input: string)
+        
+        let data = paddedString.data(using: String.Encoding.utf8)
         
         // Send data over serial port
         self.serialPort?.send(data!)
+    }
+    
+    // Pad the data to expected 64 character
+    func prepareData(input: String) -> String {
+        
+        // Set up looping variables
+        var data = input
+        let length = input.count
+        let range = (length+1)...maxSendLength
+        
+        // loop until 64 characters in length
+        for _ in range {
+            data += " "
+        }
+        
+        return data
     }
     
     // Function called when "Open"/"Close" button is pressed
