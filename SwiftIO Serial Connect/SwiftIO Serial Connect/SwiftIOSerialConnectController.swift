@@ -106,6 +106,9 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
         self.dataReceivedTextView.string = ""
     }
     
+    @IBAction func dataSendClearButton(_ sender: Any) {
+        sendTextField.stringValue = ""
+    }
     
     
     
@@ -130,6 +133,7 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
         self.serialPort = nil
         self.openCloseButton.title = "Open"
+        colorWell.color = NSColor(red: 99.0, green: 0.0, blue: 0.0, alpha: 1.0)
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didEncounterError error: Error) {
