@@ -5,7 +5,8 @@ class Pin {
     // Variables for pin values
     var pinNum:  pinN				// Pin number
     var pinType: pinT				// Pin output type
-    var pinVolt: Int				// Pin Voltage
+    var pinVolt: Float				// Pin Voltage
+    var pinDuty: Float				// Pin Duty Cycle
     
 	enum pinN {
 		case Zero, One, Two, Three, Four, Five, Six, Seven, 
@@ -41,6 +42,7 @@ class Pin {
         else 							{ pinType = pinT.NULL}
         
         pinVolt = 0
+        pinDuty = 0.0
     }
     
     init(_ num: Int){
@@ -62,15 +64,16 @@ class Pin {
         
         pinType = pinT.NULL
         pinVolt = 0
+        pinDuty = 0.0
     }
     
 	func getType() -> String {
-        if		(pinType == pinT.AnalogIn) 		{ return "Analog IN\n\n" } 
-        else if	(pinType == pinT.AnalogOut)		{ return "Analog OUT\n\n" } 
-		else if	(pinType == pinT.DigitalIn) 	{ return "Digital IN\n\n" }
-        else if	(pinType == pinT.DigitalOut)	{ return "Digital OUT\n\n" }
-        else if	(pinType == pinT.PWMOut) 		{ return "PWM OUT\n\n" }
-        else									{ return "NULL\n\n"}
+        if		(pinType == pinT.AnalogIn) 		{ return "Analog IN\n" } 
+        else if	(pinType == pinT.AnalogOut)		{ return "Analog OUT\n" } 
+		else if	(pinType == pinT.DigitalIn) 	{ return "Digital IN\n" }
+        else if	(pinType == pinT.DigitalOut)	{ return "Digital OUT\n" }
+        else if	(pinType == pinT.PWMOut) 		{ return "PWM OUT\n" }
+        else									{ return "NULL\n"}
     }
     
     func setType(_ type: String){
@@ -100,12 +103,47 @@ class Pin {
         else 								{ return -1 }				
     }
     
-    func getPinVolt() -> String {
-        if		(pinType == pinT.AnalogIn) 		{ return "Analog Input Voltage: \(pinVolt)\n" } 
-        else if	(pinType == pinT.AnalogOut)		{ return "Analog Output Voltage: \(pinVolt)\n" } 
-		else if	(pinType == pinT.DigitalIn) 	{ return "Digital Input Voltage: \(pinVolt)\n" }
-        else if	(pinType == pinT.DigitalOut)	{ return "Digital Output Voltage: \(pinVolt)\n" }
-        else if	(pinType == pinT.PWMOut) 		{ return "PWM Output Duty Cycle: \(pinVolt)\n" }
-        else									{ return "NULL\n"}
+    func getPinVolt() {
+        if		(pinType == pinT.AnalogIn) 		{ uart.write("Analog Input Voltage: \(pinVolt)\n") } 
+        else if	(pinType == pinT.AnalogOut)		{ uart.write("Analog Output Voltage: \(pinVolt)\n") } 
+		else if	(pinType == pinT.DigitalIn) 	{ uart.write("Digital Input Voltage: \(pinVolt)\n") }
+        else if	(pinType == pinT.DigitalOut)	{ uart.write("Digital Output Voltage: \(pinVolt)\n") }
+        else									{ uart.write("NULL\n") }
+    }
+    
+    func getPinDutyCycle() {
+        if(self.getPinNum() == 4 || self.getPinNum() == 5 || self.getPinNum() == 10 || 
+           self.getPinNum() == 11 || self.getPinNum() == 12 || self.getPinNum() == 13 ){
+            uart.write("Source PWM Output Duty Cycle: \(pinDuty)\n")
+        } else {
+			uart.write("Pin not capable of PWM Output")
+        }
+    }
+    
+    func setDutyCycle(_ input: Float) {
+        self.setType("PWMOut")
+        self.pinDuty = input
+        if(self.getPinNum() == 4){
+            let output = PWMOut(Id.PWM0A)
+            output.setDutycycle(input)
+        } else if(self.getPinNum() == 5) {
+        	let output = PWMOut(Id.PWM1A)
+            output.setDutycycle(input)
+        } else if(self.getPinNum() == 10) {
+        	let output = PWMOut(Id.PWM2B)
+            output.setDutycycle(input)
+        } else if(self.getPinNum() == 11) {
+        	let output = PWMOut(Id.PWM2A)
+            output.setDutycycle(input)
+        } else if(self.getPinNum() == 12) {
+        	let output = PWMOut(Id.PWM3B)
+            output.setDutycycle(input)
+        } else if(self.getPinNum() == 13) {
+        	let output = PWMOut(Id.PWM3A)
+            output.setDutycycle(input)
+        } else { 
+            uart.write("Invalid source pin selected \n") 
+        }
+        uart.write("PWM duty cycle set \n")
     }
 }

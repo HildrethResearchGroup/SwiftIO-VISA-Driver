@@ -89,16 +89,30 @@ class SCPI {
         // Parsing the string by commands
         if(input.isEmpty || input == "" || input == " "){
 			errorCode = 0
+        } else if(input.hasPrefix(":")){
+            var output = input
+            output.removeFirst(1)
+            return(parseCommand(output))
         } else if(input.contains("?")){
             return(Query(input))
+        } else if(input.hasPrefix("SOURce(")){
+            return(parseSource(input, 7, false))
+        } else if(input.hasPrefix("SOUR(")){ 
+            return(parseSource(input, 5, false))
         } else if(input.hasPrefix("[SOURce(")){
-            return(parseSource(input, 8))
+            return(parseSource(input, 8, true))
         } else if(input.hasPrefix("[SOUR(")){ 
-            return(parseSource(input, 6))
-        } else if(input.hasPrefix("DISP")){
-            return(doDSP(input, 5))
+            return(parseSource(input, 6, true))
         } else if(input.hasPrefix("DISPlay")){
             return(doDSP(input, 8))
+        } else if(input.hasPrefix("DISP")){
+            return(doDSP(input, 5))
+        } else if(input.hasPrefix("VOLTage")){
+            return(voltage(input, 7))
+        } else if(input.hasPrefix("VOLT")){
+            return(voltage(input, 4))
+        } else if(input.hasPrefix("PWM")){
+            return(PWM(input, 3))
         } else {
 			errorCode = 1
         }
@@ -107,7 +121,7 @@ class SCPI {
         return Feedback(errorCode)
     }
     
-    func parseSource(_ input: String, _ length: Int) -> String{
+    func parseSource(_ input: String, _ length: Int, _ Bracket: Bool) -> String{
 		var next = input
         next.removeFirst(length)
         let closeParenthesis = next.firstIndex(of: ")") ?? next.endIndex
@@ -115,15 +129,46 @@ class SCPI {
         let pinNum = Int(pinNumStr) ?? -1
         setSource(pinNum)
         var last = input
-        let closeBracket = input.firstIndex(of: "]") ?? next.endIndex
+        var closeBracket: String.Index
+        if(Bracket){ closeBracket = input.firstIndex(of: "]") ?? next.endIndex }
+        else{ closeBracket = input.firstIndex(of: ")") ?? next.endIndex }
         last.remove(at: closeBracket)
         let out = last[closeBracket...]
         uart.write("Assigned SOURce to Pin \(pinNum)\n")
         return(parseCommand(String(out)))
     }
     
-    func Voltage(){
-		// set a voltage
+    func voltage(_ input: String, _ length: Int) -> String{
+		var middle = input
+        middle.removeFirst(length)
+        let endNum = middle.firstIndex(of: ":") ?? middle.endIndex
+        let pinVoltStr = middle[..<endNum]
+        let Voltage = Float(pinVoltStr) ?? -1
+        uart.write("Setting source pin to \(Voltage) volts\n")
+        uart.write("SwiftIO board is not currently capable of Analog output\n")
+        if(middle.contains(":")){
+			var remaining = String(middle[endNum...])
+            remaining.removeFirst() 
+            return(parseCommand(String(remaining)))
+        } else {
+			return(parseCommand(""))
+        }
+    }
+    
+    func PWM(_ input: String, _ length: Int) -> String {
+		var middle = input
+        middle.removeFirst(length)
+        let endNum = middle.firstIndex(of: ":") ?? middle.endIndex
+        let pinPercentStr = middle[..<endNum]
+        let Percent = Float(pinPercentStr) ?? -1
+        source.setDutyCycle(Percent)
+        if(middle.contains(":")){
+			var remaining = String(middle[endNum...])
+            remaining.removeFirst() 
+            return(parseCommand(String(remaining)))
+        } else {
+			return(parseCommand(""))
+        }
     }
     
     func Query(_ input: String) -> String {
@@ -131,7 +176,11 @@ class SCPI {
             return("Current source is \(getSource())\n\n")
         } else if(input.contains("SOURce.VOLT?") || input.contains("SOURce.VOLTage?") || 
                   input.contains("SOUR.VOLT?") || input.contains("SOUR.VOLTage?")){
-            return(source.getPinVolt())
+            source.getPinVolt()
+            return(parseCommand(""))
+        } else if(input.contains("SOURce.PWM?") || input.contains("SOUR.PWM?")){
+            source.getPinDutyCycle()
+            return(parseCommand(""))
         } else {
             return Feedback(2)
         }
@@ -180,7 +229,7 @@ class SCPI {
     }
     
     func Feedback(_ errorCode: Int) -> String {
-        if(errorCode == 0)		{ return "All good in the hood!\n\n"}
+        if(errorCode == 0)		{ return "No errors\n\n"}
         else if(errorCode == 1)	{ return "Unknown input error\n\n"}
         else if(errorCode == 2)	{ return "Unknown Query error\n\n"}
         else					{ return "Unknown error\n\n"}
