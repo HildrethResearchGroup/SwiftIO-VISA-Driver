@@ -9,8 +9,9 @@ import Foundation
 
 import Cocoa
 import ORSSerial
+import UserNotifications
 
-class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNotificationCenterDelegate {
+class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate {
     
     
     @objc let serialPortManager = ORSSerialPortManager.shared()
@@ -35,9 +36,10 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     @IBOutlet weak var colorWell: NSColorWell!
     @IBOutlet weak var helpTextField: NSTextField!
     @IBOutlet weak var helpButton: NSButton!
+    
+    
+    
     // Actions:
-    
-    
     @IBAction func helpButtonAction(_ sender: Any) {
         if helpButton.state == NSControl.StateValue.on {
             helpTextField.stringValue = "SwiftIO BaudRate: 115200"
@@ -88,14 +90,14 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     
     // Function called when "Open"/"Close" button is pressed
     @IBAction func openCloseButtonAction(_ sender: Any) {
+        
         if let port = self.serialPort {
+            // check the status of the port and perform the correct action
             if (port.isOpen) {
                 port.close()
-                
-                
-            } else {
+            }
+            else {
                 port.open()
-                
                 self.dataReceivedTextView.textStorage?.mutableString.setString("");
             }
         }
@@ -139,6 +141,8 @@ class SwiftIOSerialConnectController: NSObject, ORSSerialPortDelegate, NSUserNot
     func serialPort(_ serialPort: ORSSerialPort, didEncounterError error: Error) {
         print("SerialPort \(serialPort) encountered an error: \(error)")
     }
+    
+
     
     
 }
