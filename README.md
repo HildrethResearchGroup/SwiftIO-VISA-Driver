@@ -6,7 +6,7 @@ Sources directory and SwiftIO-VISA-Driver.mmp file are the MadMachine project/pr
 # Documentation
 
 VISA Driver documentation is found in the comments in the source code of the MadMachine project (/Sources/SwiftIO-VISA-Driver/).  
-Jazzy documentation for the MacOS application can be found in /SwiftIO\ Serial\ Connect/Docs/ directory
+Jazzy documentation for the MacOS application can be found in /SwiftIO Serial Connect/Docs/ directory
 
 # Authors
 
