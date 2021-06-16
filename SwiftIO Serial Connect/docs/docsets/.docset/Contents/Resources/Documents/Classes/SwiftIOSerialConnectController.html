@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SwiftIOSerialConnectController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SwiftIOSerialConnectController" class="dashAnchor"></a>
+    <a title="SwiftIOSerialConnectController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (85% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SwiftIOSerialConnectController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwiftIOSerialConnectController.html">SwiftIOSerialConnectController</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SwiftIOSerialConnectController</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SwiftIOSerialConnectController</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ORSSerialPortDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Controller class to hold functionality for interaction with the user interface built with a .xib interface builder.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)serialPortManager"></a>
+                    <a name="//apple_ref/swift/Property/serialPortManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)serialPortManager">serialPortManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Manages possible serial ports to connect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">let</span> <span class="nv">serialPortManager</span><span class="p">:</span> <span class="kt">ORSSerialPortManager</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)availableBaudRates"></a>
+                    <a name="//apple_ref/swift/Property/availableBaudRates" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)availableBaudRates">availableBaudRates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Possible baud rates for the user to select.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">let</span> <span class="nv">availableBaudRates</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)serialPort"></a>
+                    <a name="//apple_ref/swift/Property/serialPort" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)serialPort">serialPort</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serial port instance, which is an ORSSerialPort object, that controlls sending, recieving data with correct paramters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">serialPort</span><span class="p">:</span> <span class="kt">ORSSerialPort</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22SwiftIO_Serial_Connect0a8IOSerialD10ControllerC13maxSendLengthSivp"></a>
+                    <a name="//apple_ref/swift/Property/maxSendLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22SwiftIO_Serial_Connect0a8IOSerialD10ControllerC13maxSendLengthSivp">maxSendLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of bytes that the SwiftIO board is expecting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">maxSendLength</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)sendButton"></a>
+                    <a name="//apple_ref/swift/Property/sendButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)sendButton">sendButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button labeled &ldquo;Send&rdquo;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">sendButton</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)sendTextField"></a>
+                    <a name="//apple_ref/swift/Property/sendTextField" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)sendTextField">sendTextField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Text field labeled &ldquo;Input Value&rdquo;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">sendTextField</span><span class="p">:</span> <span class="kt">NSTextField</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)openCloseButton"></a>
+                    <a name="//apple_ref/swift/Property/openCloseButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)openCloseButton">openCloseButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button labeled &ldquo;Open&rdquo; or &ldquo;Close&rdquo; based on the serial port&rsquo;s status</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">openCloseButton</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)dataReceivedTextView"></a>
+                    <a name="//apple_ref/swift/Property/dataReceivedTextView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)dataReceivedTextView">dataReceivedTextView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bottom text field for receiving data, default empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">var</span> <span class="nv">dataReceivedTextView</span><span class="p">:</span> <span class="kt">NSTextView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)colorWell"></a>
+                    <a name="//apple_ref/swift/Property/colorWell" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)colorWell">colorWell</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Color square adjacent to port path selection, denoting whether serial port is connected</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">colorWell</span><span class="p">:</span> <span class="kt">NSColorWell</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)helpTextField"></a>
+                    <a name="//apple_ref/swift/Property/helpTextField" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)helpTextField">helpTextField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default empty text field, toggles help text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">helpTextField</span><span class="p">:</span> <span class="kt">NSTextField</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)helpButton"></a>
+                    <a name="//apple_ref/swift/Property/helpButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(py)helpButton">helpButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button labeled &ldquo;?&rdquo;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">helpButton</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)helpButtonAction:"></a>
+                    <a name="//apple_ref/swift/Method/helpButtonAction(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)helpButtonAction:">helpButtonAction(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action method called when &ldquo;?&rdquo; button is pressed. Toggles on and off the baud rate comment</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">helpButtonAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Button being pressed (&ldquo;?&rdquo; button)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)sendButtonAction:"></a>
+                    <a name="//apple_ref/swift/Method/sendButtonAction(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)sendButtonAction:">sendButtonAction(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action method called when &ldquo;Send&rdquo; button is pressed. Prepares and sends data to SwiftIO board</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">sendButtonAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Button being pressed (&ldquo;Send&rdquo; button)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22SwiftIO_Serial_Connect0a8IOSerialD10ControllerC11prepareData5inputS2S_tF"></a>
+                    <a name="//apple_ref/swift/Method/prepareData(input:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22SwiftIO_Serial_Connect0a8IOSerialD10ControllerC11prepareData5inputS2S_tF">prepareData(input:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method for padded data to send over serial connection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareData</span><span class="p">(</span><span class="nv">input</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>input</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String input from user interface.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Padded string used for sending over serial connection.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)openCloseButtonAction:"></a>
+                    <a name="//apple_ref/swift/Method/openCloseButtonAction(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)openCloseButtonAction:">openCloseButtonAction(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action method called when &ldquo;Open&rdquo;/&ldquo;Close&rdquo; button. Opens or closes serial port connection depending on port status</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">openCloseButtonAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Button being pressed (&ldquo;Open/Close&rdquo; button)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)clearButtonAction:"></a>
+                    <a name="//apple_ref/swift/Method/clearButtonAction(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)clearButtonAction:">clearButtonAction(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action method called when data received &ldquo;Clear&rdquo; button is pressed. Clears text field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">clearButtonAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Button being pressed (lower &ldquo;Clear&rdquo; button)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)dataSendClearButton:"></a>
+                    <a name="//apple_ref/swift/Method/dataSendClearButton(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)dataSendClearButton:">dataSendClearButton(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action method called when data send &ldquo;Clear&rdquo; button is pressed. Clears text field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">dataSendClearButton</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Button being pressed (upper &ldquo;Clear&rdquo; button)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPortWasOpened:"></a>
+                    <a name="//apple_ref/swift/Method/serialPortWasOpened(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPortWasOpened:">serialPortWasOpened(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update button text and color well when serial port is opened.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialPortWasOpened</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialPort</span><span class="p">:</span> <span class="kt">ORSSerialPort</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serialPort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Serial Port being connected to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPortWasClosed:"></a>
+                    <a name="//apple_ref/swift/Method/serialPortWasClosed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPortWasClosed:">serialPortWasClosed(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update button text and and color well when serial port is closed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialPortWasClosed</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialPort</span><span class="p">:</span> <span class="kt">ORSSerialPort</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serialPort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Serial port being connected to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPort:didReceiveData:"></a>
+                    <a name="//apple_ref/swift/Method/serialPort(_:didReceive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPort:didReceiveData:">serialPort(_:<wbr>didReceive:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method for receiving data from serial connection and displaying it on the interface.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialPort</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialPort</span><span class="p">:</span> <span class="kt">ORSSerialPort</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serialPort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Serial port that is connected to the app.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Data that is received from serial connection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPortWasRemovedFromSystem:"></a>
+                    <a name="//apple_ref/swift/Method/serialPortWasRemovedFromSystem(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPortWasRemovedFromSystem:">serialPortWasRemovedFromSystem(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method for disconnecting the serial port in code and on the interface when the connection is removed from the port manager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialPortWasRemovedFromSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialPort</span><span class="p">:</span> <span class="kt">ORSSerialPort</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serialPort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Serial port being disconnected.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPort:didEncounterError:"></a>
+                    <a name="//apple_ref/swift/Method/serialPort(_:didEncounterError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SwiftIO_Serial_Connect@objc(cs)SwiftIOSerialConnectController(im)serialPort:didEncounterError:">serialPort(_:<wbr>didEncounterError:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method for letting the user know when there is an error with the serial port connection</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">serialPort</span><span class="p">(</span><span class="n">_</span> <span class="nv">serialPort</span><span class="p">:</span> <span class="kt">ORSSerialPort</span><span class="p">,</span> <span class="n">didEncounterError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serialPort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Serial port that has the error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error message from error encountered.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-06-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
