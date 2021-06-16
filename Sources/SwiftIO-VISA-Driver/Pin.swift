@@ -1,4 +1,9 @@
-import SwiftIO
+// Code Template for VISA Driver Project
+// Authors: Grant Rulon, Ryan Rumana, Ethan Vijayabaskaran, and Mitch Watkins
+
+// Project Imports //////////////////////////////////////////////////
+import SwiftIO						// Basic import for all programs
+// Add more here if needed
 
 class Pin {
     
@@ -8,15 +13,18 @@ class Pin {
     var pinVolt: Float				// Pin Voltage
     var pinDuty: Float				// Pin Duty Cycle
     
+    // enumerated type for pin numbers
 	enum pinN {
 		case Zero, One, Two, Three, Four, Five, Six, Seven, 
         	 Eight, Nine, Ten, Eleven, Twelve, Thirteen, NULL
 	}
     
+    // enumerated type for the pin modes
     enum pinT {
 		case AnalogIn, AnalogOut, DigitalIn, DigitalOut, PWMOut, NULL
 	}
     
+    // init function for each pin with type included, assignes values to each of the variables
     init(_ type: String, _ num: Int){
         if(num == 0)	  	{ pinNum = pinN.Zero }
         else if(num == 1) 	{ pinNum = pinN.One }
@@ -45,6 +53,7 @@ class Pin {
         pinDuty = 0.0
     }
     
+    // default init function for each pin, assignes values to each of the variables
     init(_ num: Int){
         if(num == 0)	  	{ pinNum = pinN.Zero }
         else if(num == 1) 	{ pinNum = pinN.One }
@@ -67,6 +76,7 @@ class Pin {
         pinDuty = 0.0
     }
     
+    // method for returning the pin mode
 	func getType() -> String {
         if		(pinType == pinT.AnalogIn) 		{ return "Analog IN\n" } 
         else if	(pinType == pinT.AnalogOut)		{ return "Analog OUT\n" } 
@@ -76,6 +86,7 @@ class Pin {
         else									{ return "NULL\n"}
     }
     
+    // method for setting the pin mode
     func setType(_ type: String){
         if(type == "AnalogIn") 			{ pinType = pinT.AnalogIn}
         else if(type == "AnalogOut") 	{ pinType = pinT.AnalogOut}
@@ -85,6 +96,7 @@ class Pin {
         else 							{ pinType = pinT.NULL}
     }
     
+    // method for returning the pin number
     func getPinNum() -> Int {
         if	   (pinNum == pinN.Zero) 		{ return 0 }
         else if(pinNum == pinN.One) 		{ return 1 }
@@ -103,6 +115,9 @@ class Pin {
         else 								{ return -1 }				
     }
     
+    // method for returning the voltage value
+    //
+    // Note this method is incomplete
     func getPinVolt() {
         if		(pinType == pinT.AnalogIn) 		{ uart.write("Analog Input Voltage: \(pinVolt)\n") } 
         else if	(pinType == pinT.AnalogOut)		{ uart.write("Analog Output Voltage: \(pinVolt)\n") } 
@@ -111,6 +126,7 @@ class Pin {
         else									{ uart.write("NULL\n") }
     }
     
+    // method for returning the duty cycle
     func getPinDutyCycle() {
         if(self.getPinNum() == 4 || self.getPinNum() == 5 || self.getPinNum() == 10 || 
            self.getPinNum() == 11 || self.getPinNum() == 12 || self.getPinNum() == 13 ){
@@ -120,6 +136,8 @@ class Pin {
         }
     }
     
+    // method for setting the duty cycle
+    // each pin has a different command to turn on it's pwm signal
     func setDutyCycle(_ input: Float) {
         self.setType("PWMOut")
         self.pinDuty = input

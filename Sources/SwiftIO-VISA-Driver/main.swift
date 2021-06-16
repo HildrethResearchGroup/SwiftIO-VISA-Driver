@@ -35,6 +35,7 @@ while true {
 	}
     let stringIn = array.joined()
     
+    // writing the string to the display for the user to see
     uart.write(" \(stringIn)\n")
     
     // pass the string into the VISA class and write the output to the screen
